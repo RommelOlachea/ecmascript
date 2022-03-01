@@ -99,11 +99,42 @@ helloPromise()
 .then(()=>console.log('Hola'))
 .catch(error => console.log(error));
 
+//CLASES
 
+class calculator{
+    constructor(){
+        this.valueA = 0;
+        this.valueB = 0;
+    }
 
+    sum(valor1, valor2){
+        this.valueA = valor1;
+        this.valueB = valor2;
+        return this.valueA + this.valueB;
+    }
+}
 
+const calc = new calculator();
+console.log(calc.sum(5,9));
 
+//MODULOS
+import { hello } from './module';
+console.log(hello());
 
+//GENERADORES (GENERATORS)
 
+function* helloWorld() {
+    if(true){
+        yield 'Hello, ';
+    }
+    if(true){
+        yield 'world!';
+    }
+}
+
+const generatorHellow = helloWorld();
+console.log(generatorHellow.next().value);
+console.log(generatorHellow.next().value);
+console.log(generatorHellow.next().value);
 
 
