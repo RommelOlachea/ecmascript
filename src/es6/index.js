@@ -58,6 +58,49 @@ let education = ['Ernesto', ...team1, ...team2];
 let education2 = team1 + team2;
 console.log(education2);
 
+//ARROWS FUNCTION, FUNCIONES TIPO FLECHA
+let names = [
+    {name : 'Rommel', age:40},
+    {name : 'Mary Paty', age: 35}
+];
+
+let listOfNames = names.map(function(item){
+    console.log(item.name);
+});
+
+let listOfNames2 = names.map(item => console.log(item.name));
+// otras formas de declaracion de las arrow functions 
+const listOfNames3 = (name,age,country) => {
+    ...acciones a realizar
+};
+
+//otra forma si es un solo parametro
+const listOfNames4 = name => {
+    ...acciones a realizar
+};
+
+const square = num => num * num;
+
+let c = square(4);
+
+//PROMESAS
+const helloPromise = () => {
+    return new Promise((resolve,reject) => {
+        if (true){
+            resolve('HEY CORRECTO!');
+        }else{
+            reject('upsi!!!');
+        }
+    });
+};
+
+helloPromise()
+.then(response => console.log(response))
+.then(()=>console.log('Hola'))
+.catch(error => console.log(error));
+
+
+
 
 
 
