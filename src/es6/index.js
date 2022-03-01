@@ -55,8 +55,8 @@ let team1 = ['Rommel','Mary Paty','Romina'];
 let team2 = ['Osmar','Aida','Valeria'];
 
 let education = ['Ernesto', ...team1, ...team2];
-
-console.log(education);
+let education2 = team1 + team2;
+console.log(education2);
 
 
 
