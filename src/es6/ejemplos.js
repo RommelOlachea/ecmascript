@@ -1,6 +1,14 @@
-let arregloNombres = ['Rommel','Mary Paty','Osmar','Romina'];
+const helloWorld = () => {
+    return new Promise((resolve,reject) => {
+        (true)
+            ? setTimeout(resolve('Hola Mundo!!'),3000)
+            : reject(new Error('Ups ocurrio un error'));
+    });
+}
 
-let nombres = arregloNombres.map(nombre => console.log(nombre));
+const asynHello = async () => {
+    const hello = await helloWorld();
+    console.log(hello);
+}
 
-
-
+asynHello();
