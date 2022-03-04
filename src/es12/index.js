@@ -1,0 +1,1 @@
+const str = "JavaScript es maravilloso "
